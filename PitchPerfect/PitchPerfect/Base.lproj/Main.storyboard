@@ -31,39 +31,61 @@
                                         <exclude reference="osK-dg-goA"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="150" y="250" width="100" height="100"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="ijb-7o-OWV"/>
                                         <include reference="osK-dg-goA"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JqC-0y-aGJ"/>
+                                </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClB-TN-wO0">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="150" y="454" width="100" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="IHf-8a-qfN" secondAttribute="centerY" id="Guj-EN-Uah"/>
                             <constraint firstAttribute="centerX" secondItem="IHf-8a-qfN" secondAttribute="centerX" id="Kah-5u-YEC"/>
+                            <constraint firstItem="ClB-TN-wO0" firstAttribute="top" secondItem="IHf-8a-qfN" secondAttribute="bottom" constant="-21" id="Q4j-aF-lt7"/>
+                            <constraint firstAttribute="centerX" secondItem="ClB-TN-wO0" secondAttribute="centerX" id="rpf-E6-QSk"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="IHf-8a-qfN"/>
+                                <exclude reference="ClB-TN-wO0"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Guj-EN-Uah"/>
                                 <exclude reference="Kah-5u-YEC"/>
+                                <exclude reference="Q4j-aF-lt7"/>
+                                <exclude reference="rpf-E6-QSk"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="IHf-8a-qfN"/>
+                                <include reference="ClB-TN-wO0"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Guj-EN-Uah"/>
                                 <include reference="Kah-5u-YEC"/>
+                                <include reference="Q4j-aF-lt7"/>
+                                <include reference="rpf-E6-QSk"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="recordingInProgress" destination="ClB-TN-wO0" id="QQA-Si-GSi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
