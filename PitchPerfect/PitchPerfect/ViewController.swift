@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var stopRecording: UIButton!
 
     @IBOutlet weak var recordingInProgress: UILabel!
     override func viewDidLoad() {
@@ -25,7 +26,8 @@ class ViewController: UIViewController {
     @IBAction func recordAudio(sender: UIButton) {
         //show text box saying "recording in progress"
         recordingInProgress.hidden=false
-        //TODO: record the user's voice
+        stopRecording.hidden=false
+        //TODO: record the user'svoice
         println("record audio")
     }
 }
